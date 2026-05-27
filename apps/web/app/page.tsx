@@ -23,15 +23,22 @@ export default function Home() {
         Merchant Settlement Waterfall
       </h1>
 
-      <p className="text-gray-400 mb-8 text-lg">
+      <p className="text-gray-400 mb-4 text-lg">
         Track how gross card sales become net merchant deposits
         across the payment rail ecosystem.
       </p>
 
+      {/* DATASET BADGE */}
+      <div className="inline-flex items-center px-4 py-2 rounded-xl border border-gray-800 bg-[#111827] mb-8">
+        <span className="text-sm text-gray-300">
+          Synthetic Intelligence Dataset • CFPB • Federal Reserve Study
+        </span>
+      </div>
+
       {/* MAIN GRID */}
       <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
 
-        {/* LEFT SIDE — MAIN ANALYTICS */}
+        {/* LEFT SIDE — ANALYTICS */}
         <div className="lg:col-span-7 space-y-6">
 
           {/* KPI CARDS */}
@@ -79,8 +86,24 @@ export default function Home() {
 
           </div>
 
-          {/* WATERFALL CHART */}
+          {/* WATERFALL */}
           <SettlementWaterfall />
+
+          {/* INTELLIGENCE INSIGHT */}
+          <div className="bg-[#111827] border border-gray-800 rounded-2xl p-6">
+
+            <h2 className="text-xl font-bold mb-3">
+              Settlement Intelligence Insight
+            </h2>
+
+            <p className="text-gray-300 leading-relaxed">
+              Interchange and processor fees account for the majority
+              of merchant settlement leakage. Reserve holds create delayed
+              liquidity exposure, especially for high-risk merchants
+              and cross-border transactions.
+            </p>
+
+          </div>
 
           {/* DELAY CHART */}
           <SettlementDelayChart />
@@ -158,6 +181,41 @@ export default function Home() {
 
                 <p>
                   Networks → Acquirers → Processors → Banks → Merchants
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* REGULATORY OVERSIGHT */}
+          <div className="bg-[#111827] border border-gray-800 rounded-2xl p-6">
+
+            <h2 className="text-2xl font-bold mb-4">
+              Regulatory Oversight
+            </h2>
+
+            <div className="space-y-4 text-gray-300">
+
+              <div>
+                <p className="font-semibold text-white">
+                  CFPB
+                </p>
+
+                <p>
+                  Monitors merchant fairness, fee transparency,
+                  and settlement dispute practices.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-white">
+                  Federal Reserve
+                </p>
+
+                <p>
+                  Oversees payment system stability and
+                  settlement infrastructure risk.
                 </p>
               </div>
 
